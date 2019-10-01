@@ -1,0 +1,54 @@
+{
+  "name": "threejs-lowpoly-sphere-bloom",
+  "version": "1.0.0",
+  "description": "A simple experiment with ThreeJS",
+  "main": "index.js",
+  "dependencies": {
+    "file-loader": "^4.2.0",
+    "lodash": "^4.17.15",
+    "three": "^0.109.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.3",
+    "dotenv": "^8.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-google": "^0.13.0",
+    "eslint-plugin-import": "^2.18.2",
+    "rxjs": "^6.5.2",
+    "webpack": "^4.39.1",
+    "webpack-bundle-analyzer": "^3.5.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "eslint-loader": "^2.2.1",
+    "imports-loader": "^0.8.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "html-webpack-plugin": "^3.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm ci && webpack --config webpack.config.js --mode production",
+    "build-serve": "webpack-dev-server --mode production",
+    "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endosama/threejs-lowpoly-sphere-bloom.git"
+  },
+  "keywords": [
+    "threejs",
+    "js",
+    "sphere",
+    "lowpoly",
+    "3D"
+  ],
+  "author": "Andrea Piras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/endosama/threejs-lowpoly-sphere-bloom/issues"
+  },
+  "homepage": "https://github.com/endosama/threejs-lowpoly-sphere-bloom#readme"
+}
