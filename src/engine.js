@@ -116,7 +116,7 @@ export class Engine {
 
         var params = {
             exposure: 1.3,
-            bloomStrength: 3.6,
+            bloomStrength: 3.0,
             bloomThreshold: 0,
             bloomRadius: 0.3,
         };
@@ -124,25 +124,12 @@ export class Engine {
         bloomPass.threshold = params.bloomThreshold;
         bloomPass.strength = params.bloomStrength;
         bloomPass.radius = params.bloomRadius;
-        var RGBShiftPass = new THREE.ShaderPass(THREE.RGBShiftShader);
-        // var vignettePass = new THREE.ShaderPass(THREE.VignetteShader);
-        var hBlurShader = new THREE.ShaderPass(THREE.HorizontalBlurShader);
-        var vBlurShader = new THREE.ShaderPass(THREE.VerticalBlurShader);
-        // var effectScreen = new THREE.ShaderPass(THREE.ShaderExtras.screen);
-        // vignettePass.uniforms.darkness.value = 2;
-        hBlurShader.uniforms.h.value = 1 / this.SCREEN_WIDTH;
-        vBlurShader.uniforms.v.value = 1 / this.SCREEN_HEIGHT;
-        RGBShiftPass.uniforms.amount.value = 0;
 
         this.composer = new THREE.EffectComposer(this.renderer);
         this.composer.renderToScreen = true;
         this.composer.addPass(renderScene);
         this.composer.addPass(bloomPass);
-        this.composer.addPass(RGBShiftPass);
-        // this.composer.addPass(vignettePass);
-        this.composer.addPass(hBlurShader);
-        this.composer.addPass(vBlurShader);
-        // this.composer.addPass(effectScreen);
+
         this.subscriber = windowResizeSuscribe(() => {
             const newWidth = window.innerWidth;
             const newHeight = window.innerHeight;
