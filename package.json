@@ -6,7 +6,7 @@
   "dependencies": {
     "file-loader": "^4.2.0",
     "lodash": "^4.17.15",
-    "three": "^0.109.0"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
