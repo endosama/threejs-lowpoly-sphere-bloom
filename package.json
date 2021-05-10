@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "file-loader": "^4.2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "three": "^0.109.0"
   },
   "devDependencies": {
